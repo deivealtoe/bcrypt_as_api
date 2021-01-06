@@ -6,7 +6,17 @@ module.exports = {
         try {
             const { userText } = request.body;
 
-            const hash = await bcrypt.hash(userText, 10);
+            const salt = parseInt(request.query.salt);
+
+            if (salt) {
+                if (salt >= 1 && salt <= 16) {
+                    hash = await bcrypt.hash(userText, salt);
+                } else {
+                    return response.status(400).json({ msg: 'Salt number too big for this poor server' });
+                }
+            } else {
+                hash = await bcrypt.hash(userText, 10);
+            }
 
             await knex('bcrypt_hashes').insert({
                 text: userText,
