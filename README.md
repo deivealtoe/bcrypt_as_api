@@ -6,9 +6,8 @@ I needed to start somewhere and decided to start with it.
 
 ### This is a simple project
 
-By default, the salt value is **10**
-
 + **/create_hash**
+  + Default salt number is 10, but it can be modified by passing the parameter **?salt=**. It must be between 1 - 16.
   + It is a POST request where you pass the text to be hashed. Returns the hash.
 + **/compare_hashs**
   + It is a POST request where you pass the text and the hash to be compared. Returns true or false.
