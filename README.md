@@ -16,3 +16,12 @@ Simple API to hash e compare hash using bcrypt.
   + ![Print of a request getting all hashes saved in the database](https://raw.githubusercontent.com/deivealtoe/bcrypt_as_api/master/_images/get_all_hashes_saved.png)
 
 #### In production server it won't be a database saving hashes
+
+### Used tecnologies/packages
+
++ Node
+  + Express
+  + Nodemon
+  + Knex
+  + Mssql
+  + Bcrypt
