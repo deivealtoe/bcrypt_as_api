@@ -25,3 +25,5 @@ Simple API to hash e compare hash using bcrypt.
   + Knex
   + Mssql
   + Bcrypt
++ Docker Container with MSSql
+  + docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=???' -p 1433:1433 -d mcr.microsoft.com/mssql/server:2017-latest
